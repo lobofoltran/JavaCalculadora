@@ -2,11 +2,11 @@ package lobofoltran.com.github.calculadora.programa;
 
 import java.util.Locale;
 import java.util.Scanner;
+import classes.Subtracao;
+import classes.Multiplicacao;
+import classes.Divisao;
 import lobofoltran.com.github.calculadora.classes.Soma;
 import lobofoltran.com.github.calculadora.interfaces.ICalculadora;
-
-import classes.*;
-
 
 public class Application {	
 	
@@ -73,8 +73,24 @@ public class Application {
 		    } while (again);
 
 		    do {
-		    	System.out.println("Será uma " + operation + " de quantos números? (Mínimo de 2 números!)");
-		    	qtySelection = scan.nextInt();
+		    	switch (operation) {
+		    		case "1":
+				    	System.out.println("Será uma soma de quantos números? (Mínimo de 2 números!)");
+				    	qtySelection = scan.nextInt();
+				    	break;
+		    		case "2":
+				    	System.out.println("Será uma subtração de quantos números? (Mínimo de 2 números!)");
+				    	qtySelection = scan.nextInt();
+				    	break;
+		    		case "3":
+				    	System.out.println("Será uma multiplicação de quantos números? (Mínimo de 2 números!)");
+				    	qtySelection = scan.nextInt();
+				    	break;
+		    		case "4":
+				    	System.out.println("Será uma divisão de quantos números? (Mínimo de 2 números!)");
+				    	qtySelection = scan.nextInt();
+				    	break;
+		    	}
 		    } while (qtySelection < 2);
 
 		    do {
